@@ -1,0 +1,42 @@
+{
+    "name": "mimic/zero-admin",
+    "keywords": ["laravel", "admin", "panel"],
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "~6.0|~7.0",
+        "intervention/image": "^2.4",
+        "doctrine/dbal": "^2.5",
+        "larapack/doctrine-support": "~0.1.4",
+        "laravel/ui": ">=1.0",
+        "arrilot/laravel-widgets": "^3.7",
+        "league/flysystem": "~1.0.41",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpcov": ">=6.0",
+        "phpunit/phpunit": ">=8.0",
+        "laravel/framework": "~6.0|~7.0",
+        "orchestra/testbench": ">=4.0",
+        "laravel/browser-kit-testing": ">=5.0.0",
+        "orchestra/testbench-browser-kit": ">=4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mimic\\ZAdmin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mimic\\ZAdmin\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mimic\\ZAdmin\\ZAdminServiceProvider",
+                "Mimic\\ZAdmin\\Providers\\VoyagerDummyServiceProvider"
+            ]
+        }
+    }
+}
